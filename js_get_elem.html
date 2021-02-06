@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js_get_elem</title>
+        <style>
+            @font-face {
+                font-family : "Nanum";
+                src: url("./NanumGothicEcoBold.ttf");
+            }
+            /*
+            #title {
+                color : black;
+                font-family : serif;
+            }
+            */
+            .clicked {
+                color : blue;
+                font-family : "Nanum";
+            }
+            .clicked2 {
+                color : cyan;
+                font-family : sans-serif;
+            }
+            
+        </style>
+        <script>
+            //https://anko3899.tistory.com/218
+            function func() {
+                
+                e = document.getElementById("test");
+                e.style.color="red";
+            }
+            function switching(){
+                const a = document.getElementById("title");//const a=document.querySelector("#title");
+                const hasClass = a.classList.contains("clicked");
+
+                if(hasClass) {a.classList.remove("clicked"); a.classList.add("clicked2")}
+                else {a.classList.add("clicked"); a.classList.remove("clicked2");}
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="test">이것이 헤딩입니다.</h1>
+        <h2 id="title" class="clicked" >이것이 헤딩2입니다.</h2>
+        <button type = "button" onclick = "func()">클릭하세요</button>
+        <button type = "button" onclick = "switching()">클릭하세요2</button>
+    </body>
+</html>
+
