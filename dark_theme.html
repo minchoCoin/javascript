@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+        <style>
+            /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align:middle;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+p.switchState {
+	margin:0px;
+	display:inline-block;
+	font-size:15px;
+	font-weight:bold;
+}
+/*dark mode*/
+html {
+    --bg-color: #fff;
+    --text-color: #343434;
+    --link-color: #0000ee;
+}
+
+html.dark {
+    --bg-color: #121212;
+    --text-color: #bbb;
+    --link-color: #3ea6ff;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+        </style>
+        
+    </head>
+    <body>
+            <label class="switch">
+                    <input type="checkbox" id="darkcheck">
+                    <span class="slider round" ></span>
+                  </label>
+                  <p class="switchState">OFF</p><p style="display:none;" class="switchState">ON</p>
+
+
+                  <h1>Hello World!</h1>
+                  <p>This is a parameter <br>This is a toggle dark mode program. I'm going to make dark toggle chrome extension program.</p>
+                  <a href="#">Link</a>
+
+                  <script>
+                       var check = $("input[type='checkbox']");
+                       check.click(function(){$("p.switchState").toggle();});
+                       check.click(function(){document.querySelector('html').classList.toggle('dark')});
+
+                       /* if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                            document.documentElement.classList.add("dark")
+                            }*/
+                            
+
+
+                        
+                  </script>
+
+                 
+
+    
+    </body>
+    <!--https://marshall-ku.com/web/tips/%EC%9B%B9%EC%97%90%EC%84%9C-%EB%8B%A4%ED%81%AC-%EB%AA%A8%EB%93%9C-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-->
+    <!--https://imivory.tistory.com/15-->
+    <!--https://webisfree.com/2016-05-14/[javascript]-input-%ED%83%9C%EA%B7%B8%EC%9D%98-%EC%B2%B4%ED%81%AC%EC%97%AC%EB%B6%80-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0-%EC%B2%B4%ED%81%AC%EA%B0%92-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0-->
+    <!--https://m.blog.naver.com/bonobonoks/221469124900-->
+    <!--MISSION COMPLETE-->
+</html>
