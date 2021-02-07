@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            /* https://jdkblog.tistory.com/60 */
+            var Gamestart = confirm("게임 한판 하실래요?");
+            if(Gamestart){
+                alert("좋습니다. 게임을 시작합니다.");
+                //window.location.href="http://www.naver.com"; //window.opener.location.href="http://www.naver.com";
+            }
+            else{
+                alert("네, 나중에 하시죠(웹페이지가 닫힙니다).");
+                self.close();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>game</h1>
+    </body>
+</html>
